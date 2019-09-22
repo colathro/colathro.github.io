@@ -13,12 +13,15 @@ categories: FinOps
                 
     SELECT c.name FROM sys.all_columns AS c 
     left join sys.tables AS t ON c.object_id = t.object_id
-    WHERE t.name = @TableName  
+    WHERE t.name = @TableName
+    -- In the input section, each column must be on its own line.
+    -- Highlight the output of the above and copy/paste.  
 {% endhighlight %}
 
 {% raw %}
 <script src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
 <h2>Input:</h2>
+
 <div id="input">
 <textarea id="input_box" rows="10" cols="60"></textarea>
 <br>
